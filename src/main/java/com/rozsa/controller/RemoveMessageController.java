@@ -1,5 +1,6 @@
 package com.rozsa.controller;
 
+import com.rozsa.business.RemoveMessage;
 import com.rozsa.business.UpdateNpc;
 import com.rozsa.model.PassiveNpcData;
 
@@ -31,7 +32,8 @@ public class RemoveMessageController extends HttpServlet {
         UpdateNpc updateNpc = new UpdateNpc(req, npc);
         updateNpc.execute();
 
-        npc.removeInteractionMessage(targetInteractionMessageId);
+        RemoveMessage removeMessage = new RemoveMessage(npc, targetInteractionMessageId);
+        removeMessage.execute();
 
         RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
         rd.forward(req, resp);

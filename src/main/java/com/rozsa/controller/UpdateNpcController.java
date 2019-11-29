@@ -13,7 +13,7 @@ import java.io.IOException;
 import static com.rozsa.reader.DataGetter.getInteger;
 
 @WebServlet("/updateNpc")
-public class UpdateNpcsController extends HttpServlet
+public class UpdateNpcController extends HttpServlet
 {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException
