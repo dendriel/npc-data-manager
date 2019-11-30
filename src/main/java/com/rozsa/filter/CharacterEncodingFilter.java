@@ -8,13 +8,13 @@ import java.io.IOException;
 public class CharacterEncodingFilter implements Filter {
 
     @Override
-    public void init(FilterConfig config) throws ServletException {
+    public void init(FilterConfig config) {
         // NOOP.
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
-    {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
         chain.doFilter(request, response);
     }

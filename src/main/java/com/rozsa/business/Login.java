@@ -26,6 +26,7 @@ public class Login {
         if (expectedUsername.equals(username) && expectedPassword.equals(password)) {
             System.out.println("Authentication success for user " + username);
             onSuccess.execute(state);
+            return;
         }
 
         System.out.println("Authentication failure for user " + username);

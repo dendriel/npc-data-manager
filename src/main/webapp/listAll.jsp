@@ -10,6 +10,10 @@
 </head>
 <body>
 
+<form action="/logout" method="GET" style="float:left">
+    <input type="submit" value="Logout" style="width:100px;height:100px; margin-right:10px">
+</form>
+
 <form action="/saveNpcs" method="POST" style="float:left">
     <input type="submit" value="Save to File" style="width:100px;height:100px; margin-right:10px">
 </form>
