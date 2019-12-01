@@ -7,4 +7,5 @@ public enum InteractionType
     MERCHANT,
     GIVE_ITEM,
     TELEPORT,
+    PLAY_SOUND,
 }

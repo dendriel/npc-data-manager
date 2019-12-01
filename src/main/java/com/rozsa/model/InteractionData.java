@@ -27,6 +27,8 @@ public class InteractionData
 
     private Offset toPos;
 
+    private String targetData;
+
     public InteractionData() {}
 
     public InteractionData(int id) {
@@ -196,5 +198,13 @@ public class InteractionData
 
     public void setToPos(Offset toPos) {
         this.toPos = toPos;
+    }
+
+    public String getTargetData() {
+        return targetData;
+    }
+
+    public void setTargetData(String targetData) {
+        this.targetData = targetData;
     }
 }

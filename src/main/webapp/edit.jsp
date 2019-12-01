@@ -92,6 +92,8 @@
             Teleport Target Id: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportTargetId${inter.getId()}" value="${inter.getTargetId()}">
             Pos - X: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportPosX${inter.getId()}" value="${inter.getToPos().getX()}">
             Y: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportPosY${inter.getId()}"  value="${inter.getToPos().getY()}"><br />
+            Target Data: <input type="text" name="interactions_interaction_targetData${inter.getId()}" value="${inter.getTargetData()}">
+            <br />
 
             <c:forEach var="msg" items="${inter.getMessages()}">
                 <fieldset style="background-color:#afbf7f">

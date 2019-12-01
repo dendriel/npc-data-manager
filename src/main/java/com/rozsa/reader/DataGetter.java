@@ -38,6 +38,7 @@ public final class DataGetter
         Integer posY = getInteger(req, "interactions_interaction_teleportPosY" + id);
         Offset targetPos = new Offset(posX, posY);
         data.setToPos(targetPos);
+        data.setTargetData(getString(req, "interactions_interaction_targetData" + id));
 
         List<DialogFeedbackData> messages = getMessages(req, messagesIds);
         data.setMessages(messages);
