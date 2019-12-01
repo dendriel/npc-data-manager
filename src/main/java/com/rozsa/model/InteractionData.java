@@ -23,6 +23,10 @@ public class InteractionData
 
     private List<EventData> updateEventsState;
 
+    private Integer targetId; // id = -1 -> hero; id >= 0 -> NPC
+
+    private Offset toPos;
+
     public InteractionData() {}
 
     public InteractionData(int id) {
@@ -32,6 +36,8 @@ public class InteractionData
         items = new ArrayList<>();
         requireEventsState = new ArrayList<>();
         updateEventsState = new ArrayList<>();
+        targetId = 0;
+        toPos = new Offset();
     }
 
     public Integer getId()
@@ -168,5 +174,27 @@ public class InteractionData
 
         DialogFeedbackData newMessage = new DialogFeedbackData(id);
         messages.add(newMessage);
+    }
+
+    public Integer getTargetId() {
+        if (targetId == null) {
+            targetId = 0;
+        }
+        return targetId;
+    }
+
+    public void setTargetId(Integer targetId) {
+        this.targetId = targetId;
+    }
+
+    public Offset getToPos() {
+        if (toPos == null) {
+            toPos = new Offset();
+        }
+        return toPos;
+    }
+
+    public void setToPos(Offset toPos) {
+        this.toPos = toPos;
     }
 }

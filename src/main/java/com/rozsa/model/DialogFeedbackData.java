@@ -1,48 +1,44 @@
 package com.rozsa.model;
 
-public class DialogFeedbackData
-{
+public class DialogFeedbackData {
+    private static final String htmlTemplate = "<html><body></body></html>";
+
     private int id;
 
     private LabelData title;
 
     private LabelData text;
 
-    public DialogFeedbackData() {}
+    public DialogFeedbackData() {
+    }
 
     public DialogFeedbackData(int id) {
         this.id = id;
-        title = new LabelData(22);
-        text = new LabelData(20);
+        title = new LabelData(22, new Rect(12, 4, 920, 32), htmlTemplate);
+        text = new LabelData(20, new Rect(16, 32, 920, 64), htmlTemplate);
     }
 
-    public LabelData getTitle()
-    {
+    public LabelData getTitle() {
         return title;
     }
 
-    public void setTitle(LabelData title)
-    {
+    public void setTitle(LabelData title) {
         this.title = title;
     }
 
-    public LabelData getText()
-    {
+    public LabelData getText() {
         return text;
     }
 
-    public void setText(LabelData text)
-    {
+    public void setText(LabelData text) {
         this.text = text;
     }
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
         this.id = id;
     }
 }

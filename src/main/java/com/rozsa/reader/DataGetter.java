@@ -33,6 +33,12 @@ public final class DataGetter
         data.setUpdateEventsState(getEventState(req, "interactions_interaction_updateeventstate" + id));
         data.setItems(getStringList(req, "interactions_interaction_items" + id));
 
+        data.setTargetId(getInteger(req, "interactions_interaction_teleportTargetId" + id));
+        Integer posX = getInteger(req, "interactions_interaction_teleportPosX" + id);
+        Integer posY = getInteger(req, "interactions_interaction_teleportPosY" + id);
+        Offset targetPos = new Offset(posX, posY);
+        data.setToPos(targetPos);
+
         List<DialogFeedbackData> messages = getMessages(req, messagesIds);
         data.setMessages(messages);
 

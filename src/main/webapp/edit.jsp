@@ -85,10 +85,13 @@
             <input type="submit" name="removeNpcInteractionButton${inter.getId()}" value="Remove Interaction" style="height:30px; margin-bottom:10px; background-color:coral;"><br/>
             Id: <input type="number" id="numberInput" readonly name="interactions_interaction_id" value="${inter.getId()}">
             Type: <input type="text" name="interactions_interactiontype${inter.getId()}" value="${inter.getType()}"><br />
-            <span style="float:left">Required Events State:</span> <textarea name="interactions_interaction_requiredeventstate${inter.getId()}" rows="2" cols="50">${inter.getRequireEventsStateAsText()}</textarea><br />
-            <span style="float:left">Update Events State:</span> <textarea name="interactions_interaction_updateeventstate${inter.getId()}" rows="2" cols="50">${inter.getUpdateEventsStateAsText()}</textarea> <br />
+            <span style="float:left">Required Events State:</span> <textarea name="interactions_interaction_requiredeventstate${inter.getId()}" rows="4" cols="100">${inter.getRequireEventsStateAsText()}</textarea>Ex.: {"key":"event_key01", "value":false}, {"key":"event_key02", "value":true}<br />
+            <span style="float:left">Update Events State:</span> <textarea name="interactions_interaction_updateeventstate${inter.getId()}" rows="4" cols="100">${inter.getUpdateEventsStateAsText()}</textarea> <br />
             Price Multiplier: <input type="number" step="0.01" id="numberInput" name="interactions_interaction_pricemultiplier${inter.getId()}" value="${inter.getPriceMultiplier()}"><br />
             <span style="float:left">Items:</span> <textarea name="interactions_interaction_items${inter.getId()}" align="TOP" rows="3" cols="50">${inter.getItemsAsText()}</textarea> <br />
+            Teleport Target Id: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportTargetId${inter.getId()}" value="${inter.getTargetId()}">
+            Pos - X: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportPosX${inter.getId()}" value="${inter.getToPos().getX()}">
+            Y: <input type="number" step="1" id="numberInput" name="interactions_interaction_teleportPosY${inter.getId()}"  value="${inter.getToPos().getY()}"><br />
 
             <c:forEach var="msg" items="${inter.getMessages()}">
                 <fieldset style="background-color:#afbf7f">

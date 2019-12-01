@@ -6,4 +6,5 @@ public enum InteractionType
     DIALOG,
     MERCHANT,
     GIVE_ITEM,
+    TELEPORT,
 }

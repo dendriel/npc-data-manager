@@ -114,7 +114,7 @@ public class PassiveNpcData extends NpcData {
         int highestId = 0;
         for (InteractionData data : interactionData) {
             int currId = data.getId();
-            if (currId > 0) {
+            if (currId > highestId) {
                 highestId = currId;
             }
         }

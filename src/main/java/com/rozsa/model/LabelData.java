@@ -24,14 +24,14 @@ public class LabelData
 
     public LabelData() {}
 
-    public LabelData(int size)
+    public LabelData(int size, Rect rect, String text)
     {
-        text = "";
+        this.text = text;
         font = "Serif";
         style = 0;
         this.size = size;
         color = new ColorData(255, 255, 255);
-        rect = new Rect();
+        this.rect = rect;
         verticalAlignment = 0;
         horizontalAlignment = 0;
     }

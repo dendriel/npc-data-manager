@@ -4,7 +4,7 @@
 </body>
 
 <form action="/loadNpcs">
-    Data file: <input type="text" name="dataFilePath" style="width:600px;" value="E:\workspace\Java\npc-data-manager\sample_data.json"><br />
+    Data file: <input type="text" name="dataFilePath" style="width:600px;" value="E:\workspace\Java\the-quest\src\com\thequest\resources\data\npcs_data.json"><br />
     <input type="submit" value="List All Npcs">
 </form>
 

@@ -24,14 +24,13 @@
 
 <c:forEach var="npc" items="${data.getData()}">
     <fieldset>
-        <legend style="font-size: 24px;">${npc.getName()}</legend>
+        <legend style="font-size: 24px;">${npc.getName()} (${npc.getId()})</legend>
         <div style="float:left; width:300px">
             <form action="/edit.jsp">
                 <input type="text" hidden="true" name="id" value="${npc.getId()}">
                 <input type="submit" value="Edit" style="float:left;width:50px;height:70px; margin-right:10px">
             </form>
-            ID: ${npc.getId()}<br />
-            Name: ${npc.getName()}<br />
+            Image: ${npc.getSpriteData().getImageFile()}<br />
             Behavior ID: ${npc.getBehaviorId()}
         </div>
         <div style="float:right">
