@@ -35,6 +35,9 @@ public class RemoveMessageController extends HttpServlet {
         RemoveMessage removeMessage = new RemoveMessage(npc, targetInteractionMessageId);
         removeMessage.execute();
 
+        session.setAttribute("feedback", String.format("Message %d removed!", targetInteractionMessageId));
+        session.setAttribute("isBadFeedback", false);
+
         RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
         rd.forward(req, resp);
     }

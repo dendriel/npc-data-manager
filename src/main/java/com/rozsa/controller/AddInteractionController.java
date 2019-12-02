@@ -33,6 +33,9 @@ public class AddInteractionController extends HttpServlet
         AddInteraction addInteraction = new AddInteraction(npc);
         addInteraction.execute();
 
+        session.setAttribute("feedback", "New interaction added!");
+        session.setAttribute("isBadFeedback", false);
+
         RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
         rd.forward(req, resp);
     }

@@ -21,6 +21,9 @@ public class AddNpcController extends HttpServlet {
         AddNpc add = new AddNpc(dataHolder);
         add.execute();
 
+        session.setAttribute("feedback", "NPC added!");
+        session.setAttribute("isBadFeedback", false);
+
         resp.sendRedirect("/listAll.jsp");
     }
 }

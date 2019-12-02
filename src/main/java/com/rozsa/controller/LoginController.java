@@ -48,6 +48,9 @@ public class LoginController extends HttpServlet {
         HttpSession session = req.getSession();
         session.setAttribute("authenticated", false);
 
+        session.setAttribute("feedback", "Invalid username or password!");
+        session.setAttribute("isBadFeedback", true);
+
         HttpServletResponse resp = loginData.getResponse();
         try {
             resp.sendRedirect("login.jsp");

@@ -22,6 +22,8 @@
 </head>
 <body>
 
+<jsp:include page="feedback.jsp" />
+
 <%
     Integer npcId = Integer.parseInt(request.getParameter("id"));
     PassiveNpcsDataHolder dataHolder = (PassiveNpcsDataHolder)session.getAttribute("data");
@@ -33,10 +35,10 @@
     List<InteractionData> interactionData = npc.getInteractionData();
     session.setAttribute("npcInteractions", interactionData);
 %>
-<form action="/listAll.jsp" method="POST">
-    <input type="submit" value="Back" style="float:left; width:100px;height:100px; margin-right:10px">
+<form action="/listAll.jsp" method="POST" style="display:inline;">
+    <input type="submit" value="Back" style="width:100px;height:100px; margin-right:10px;">
 </form>
-<form action="/editNpc" method="POST">
+<form action="/editNpc" method="POST" style="display:inline;">
     <input type="submit" name="updateNpcDataButton" value="Update" style="width:100px;height:100px; margin-right:10px">
 <fieldset>
     <legend>${npcData.getName()}</legend>

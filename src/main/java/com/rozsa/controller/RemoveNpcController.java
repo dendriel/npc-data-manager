@@ -26,6 +26,9 @@ public class RemoveNpcController extends HttpServlet {
         RemoveNpc remove = new RemoveNpc(dataHolder, id);
         remove.execute();
 
+        session.setAttribute("feedback", "NPC removed!");
+        session.setAttribute("isBadFeedback", false);
+
         resp.sendRedirect("/listAll.jsp");
     }
 }

@@ -34,6 +34,9 @@ public class AddMessageController extends HttpServlet {
         AddMessage addMessage = new AddMessage(npc, interactionId);
         addMessage.execute();
 
+        session.setAttribute("feedback", "New message added!");
+        session.setAttribute("isBadFeedback", false);
+
         RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
         rd.forward(req, resp);
     }

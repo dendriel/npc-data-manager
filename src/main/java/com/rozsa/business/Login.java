@@ -23,6 +23,12 @@ public class Login {
         String expectedUsername = System.getProperty("username");
         String expectedPassword = System.getProperty("password");
 
+        if (expectedUsername == null || expectedPassword == null) {
+            System.out.println("Expected username or password is not set in VM!");
+            onFailure.execute(state);
+            return;
+        }
+
         if (expectedUsername.equals(username) && expectedPassword.equals(password)) {
             System.out.println("Authentication success for user " + username);
             onSuccess.execute(state);
