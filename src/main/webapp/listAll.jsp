@@ -10,6 +10,12 @@
 </head>
 <body>
 
+<%
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidated"); // HTTP 1.1
+    response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+    response.setHeader("Expires", "0"); // Proxies
+%>
+
 <form action="/logout" method="GET" style="float:left">
     <input type="submit" value="Logout" style="width:100px;height:100px; margin-right:10px">
 </form>

@@ -16,17 +16,17 @@ public class LoginFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {
-        HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) res;
-        HttpSession session = request.getSession(false);
-        String loginUri = request.getContextPath() + "/login.jsp";
-        String loginServlet = request.getContextPath() + "/login";
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
+        HttpSession session = req.getSession(false);
+        String loginUri = req.getContextPath() + "/login.jsp";
+        String loginServlet = req.getContextPath() + "/login";
 
-        if (isAuthenticated(session) || isLoginRequest(request, loginUri, loginServlet)) {
+        if (isAuthenticated(session) || isLoginRequest(req, loginUri, loginServlet)) {
             chain.doFilter(request, response);
         } else {
-            response.sendRedirect(loginUri);
+            res.sendRedirect(loginUri);
         }
     }
 
