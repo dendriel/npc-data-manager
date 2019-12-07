@@ -8,12 +8,15 @@ public class SpriteData
 
     private int order;
 
-    private Rect rect;
+    private Offset offset;
+
+    private Scale scale;
 
     private boolean enabled;
 
     public SpriteData() {
-        rect = new Rect(0,0,64,64);
+        offset = new Offset(0,0);
+        scale = new Scale(1,1);
         enabled = true;
         order = 0;
     }
@@ -38,14 +41,20 @@ public class SpriteData
         this.order = order;
     }
 
-    public Rect getRect()
-    {
-        return rect;
+    public Offset getOffset() {
+        return offset;
     }
 
-    public void setRect(Rect rect)
-    {
-        this.rect = rect;
+    public void setOffset(Offset offset) {
+        this.offset = offset;
+    }
+
+    public Scale getScale() {
+        return scale;
+    }
+
+    public void setScale(Scale scale) {
+        this.scale = scale;
     }
 
     public boolean isEnabled()

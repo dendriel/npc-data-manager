@@ -55,11 +55,14 @@
             Order: <input type="number" id="numberInput" name="spriteData_order" value="${npcSpriteData.getOrder()}">
             <br />
             <span>
-            Rect
-            X: <input type="number" id="numberInput" name="spriteData_rect_x" value="${npcSpriteData.getRect().getX()}">
-            Y: <input type="number" id="numberInput" name="spriteData_rect_y" value="${npcSpriteData.getRect().getY()}">
-            W: <input type="number" id="numberInput" name="spriteData_rect_width" value="${npcSpriteData.getRect().getWidth()}">
-            H: <input type="number" id="numberInput" name="spriteData_rect_height" value="${npcSpriteData.getRect().getHeight()}">
+            Offset
+            X: <input type="number" id="numberInput" name="spriteData_offset_x" value="${npcSpriteData.getOffset().getX()}">
+            Y: <input type="number" id="numberInput" name="spriteData_offset_y" value="${npcSpriteData.getOffset().getY()}">
+            </span>
+            <span>
+            Scale:
+            W: <input type="number" id="numberInput" step="0.001" name="spriteData_scale_width" value="${npcSpriteData.getScale().getWidth()}">
+            H: <input type="number" id="numberInput" step="0.001" name="spriteData_scale_height" value="${npcSpriteData.getScale().getHeight()}">
             </span><br />
             Image File: <input type="text" name="spriteData_imageFile" value="${npcSpriteData.getImageFile()}">
         </fieldset>

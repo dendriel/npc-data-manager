@@ -36,11 +36,12 @@ public class UpdateNpc
         sprite.setOrder(getInteger(req,"spriteData_order"));
         sprite.setImageFile(getString(req, "spriteData_imageFile"));
 
-        Rect rect = sprite.getRect();
-        rect.setX(getInteger(req,"spriteData_rect_x"));
-        rect.setY(getInteger(req,"spriteData_rect_y"));
-        rect.setWidth(getInteger(req,"spriteData_rect_width"));
-        rect.setHeight(getInteger(req,"spriteData_rect_height"));
+        Offset offset = sprite.getOffset();
+        offset.setX(getInteger(req,"spriteData_offset_x"));
+        offset.setY(getInteger(req,"spriteData_offset_y"));
+        Scale scale = sprite.getScale();
+        scale.setWidth(getDouble(req, "spriteData_scale_width"));
+        scale.setHeight(getDouble(req,"spriteData_scale_height"));
     }
 
     private void updateStatus() {

@@ -118,8 +118,13 @@ public final class DataGetter
 
         return new ArrayList<>();
     }
+
     public static  Float getFloat(HttpServletRequest req, String key) {
         return Float.parseFloat(req.getParameter(key));
+    }
+
+    public static Double getDouble(HttpServletRequest req, String key) {
+        return Double.parseDouble(req.getParameter(key));
     }
 
     public static  Integer getInteger(HttpServletRequest req, String key) {
