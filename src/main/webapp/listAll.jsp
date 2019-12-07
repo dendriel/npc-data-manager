@@ -4,14 +4,9 @@
 <html>
 <head>
     <title>All NPCs Data</title>
-    <!-- TODO: move to its own css file -->
-    <style>
-    </style>
 </head>
-<body>
-
 <jsp:include page="feedback.jsp" />
-
+<body>
 <form action="/logout" method="GET" style="float:left">
     <input type="submit" value="Logout" style="width:100px;height:100px; margin-right:10px">
 </form>

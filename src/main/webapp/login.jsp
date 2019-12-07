@@ -10,7 +10,9 @@
 <head>
     <title>Login to NPC Data Manager</title>
 </head>
+<jsp:include page="feedback.jsp" />
 <body>
+
 <form action="/login" method="POST">
     Username:<input type="text" name="username"><br />
     Password:<input type="password" name="password">

@@ -25,6 +25,9 @@ public class RemoveInteractionController extends HttpServlet
         RemoveInteraction removeInteraction = new RemoveInteraction(npc, targetInteractionId);
         removeInteraction.execute();
 
+        session.setAttribute("feedback", String.format("Interaction %d removed!", targetInteractionId));
+        session.setAttribute("isBadFeedback", false);
+
         RequestDispatcher rd = req.getRequestDispatcher("edit.jsp");
         rd.forward(req, resp);
     }

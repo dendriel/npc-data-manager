@@ -11,16 +11,19 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/saveNpcs")
-public class SaveNpcsController extends HttpServlet
-{
+public class SaveNpcsController extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException
-    {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession session = req.getSession();
-        String dataFilePath = (String)session.getAttribute("dataFilePath");
-        PassiveNpcsDataHolder dataHolder = (PassiveNpcsDataHolder)session.getAttribute("data");
+        String dataFilePath = (String) session.getAttribute("dataFilePath");
+        PassiveNpcsDataHolder dataHolder = (PassiveNpcsDataHolder) session.getAttribute("data");
 
         SaveNpcs save = new SaveNpcs(dataFilePath, dataHolder);
         save.execute();
+
+        session.setAttribute("feedback", "NPCs data successfully saved to file: " + dataFilePath);
+        session.setAttribute("isBadFeedback", false);
+
+        resp.sendRedirect("listAll.jsp");
     }
 }

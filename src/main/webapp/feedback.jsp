@@ -1,4 +1,3 @@
-<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -7,10 +6,12 @@
         return;
     }
 
-    try (PrintWriter outr = response.getWriter()) {
-        outr.print("<div style=\"background-color: lightgreen; padding:20px; font-size:24px\">" +
-                feedback +
-                "</div>"
-                );
-    }
+    Boolean isBadFeedback = (Boolean)session.getAttribute("isBadFeedback");
+    String color = isBadFeedback ? "lightcoral" : "lightgreen";
+
+    session.setAttribute("feedback", "");
+    out.print("<div style=\"background-color:" + color + "; padding:20px; font-size:24px;border-style: groove\">" +
+            feedback +
+            "</div>"
+            );
 %>
