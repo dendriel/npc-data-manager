@@ -28,6 +28,7 @@ public class UpdateNpc
     private void updateGeneralData() {
         npc.setName(getString(req, "name"));
         npc.setBehaviorId(getInteger(req,"behaviorId"));
+        npc.setFacingRight(getBoolean(req, "isFacingRight"));
     }
 
     private void updateSprite() {

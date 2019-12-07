@@ -8,6 +8,8 @@ public class NpcData
 
     private int behaviorId;
 
+    private boolean isFacingRight;
+
     private StatusData status;
 
     private SpriteData spriteData;
@@ -75,5 +77,13 @@ public class NpcData
     @Override
     public String toString() {
         return name;
+    }
+
+    public boolean isFacingRight() {
+        return isFacingRight;
+    }
+
+    public void setFacingRight(boolean facingRight) {
+        isFacingRight = facingRight;
     }
 }

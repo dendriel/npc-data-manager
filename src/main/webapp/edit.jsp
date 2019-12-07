@@ -48,7 +48,8 @@
             <legend>General</legend>
             ID: <input type="text" name="id" readonly value="${npcData.getId()}"><br />
             Name: <input type="text" name="name" value="${npcData.getName()}"><br />
-            Behavior Id: <input type="number" name="behaviorId" value="${npcData.getBehaviorId()}">
+            Behavior Id: <input type="number" name="behaviorId" value="${npcData.getBehaviorId()}"><br />
+            Is Facing Right: <input type="checkbox" name="isFacingRight" ${npcData.isFacingRight()}>
         </fieldset>
         <fieldset style="background-color:lightyellow; width:25%; float:left; height:140px">
             <legend>Sprite</legend>
