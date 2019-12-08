@@ -14,8 +14,8 @@ public class DialogFeedbackData {
 
     public DialogFeedbackData(int id) {
         this.id = id;
-        title = new LabelData(22, new Rect(12, 4, 920, 32), htmlTemplate);
-        text = new LabelData(20, new Rect(16, 32, 920, 64), htmlTemplate);
+        title = new LabelData(22, new Rect(12, 4, 920, 32), 2, 0, htmlTemplate);
+        text = new LabelData(20, new Rect(16, 32, 920, 64), 2, 1, htmlTemplate);
     }
 
     public LabelData getTitle() {

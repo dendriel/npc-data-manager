@@ -24,7 +24,7 @@ public class LabelData
 
     public LabelData() {}
 
-    public LabelData(int size, Rect rect, String text)
+    public LabelData(int size, Rect rect, int verAlign, int horAlign, String text)
     {
         this.text = text;
         font = "Serif";
@@ -32,8 +32,8 @@ public class LabelData
         this.size = size;
         color = new ColorData(255, 255, 255);
         this.rect = rect;
-        verticalAlignment = 0;
-        horizontalAlignment = 0;
+        verticalAlignment = verAlign;
+        horizontalAlignment = horAlign;
     }
 
     public int getHorizontalAlignment() {

@@ -7,6 +7,10 @@ public class EventData {
 
     private Boolean value;
 
+    private int targetX;
+
+    private int targetY;
+
     public EventType getType() {
         if (type == null) {
             type = EventType.SWITCH;
@@ -32,5 +36,21 @@ public class EventData {
 
     public void setValue(Boolean value) {
         this.value = value;
+    }
+
+    public int getTargetX() {
+        return targetX;
+    }
+
+    public void setTargetX(int targetX) {
+        this.targetX = targetX;
+    }
+
+    public int getTargetY() {
+        return targetY;
+    }
+
+    public void setTargetY(int targetY) {
+        this.targetY = targetY;
     }
 }
