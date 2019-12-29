@@ -8,4 +8,5 @@ public enum InteractionType
     GIVE_ITEM,
     TELEPORT,
     PLAY_SOUND,
+    REMOVE_QUEST_ITEM,
 }
